@@ -1,2 +1,4 @@
 .obsidian
 src/**/obj/
+**/obj/
+**/bin/

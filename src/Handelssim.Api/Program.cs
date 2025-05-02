@@ -3,7 +3,6 @@ using Handelssim.Api;
 
 using Handelssim.Domain;
 
-var builder = WebApplication.CreateBuilder(args);
 
 // Logging + Services
 builder.Services.AddLogging(logging => {
@@ -11,6 +10,8 @@ builder.Services.AddLogging(logging => {
 });
 builder.Services.AddSingleton<World>(); // optional
 
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

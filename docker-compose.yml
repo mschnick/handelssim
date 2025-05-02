@@ -13,7 +13,7 @@ services:
 
   backend:
     build:
-      context: ./api/Handelssim.Api
+      context: ./src/Handelssim.Api
       dockerfile: Dockerfile
     depends_on:
       - db

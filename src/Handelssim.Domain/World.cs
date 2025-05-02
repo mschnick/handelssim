@@ -52,13 +52,14 @@ namespace Handelssim.Domain
         public Guid Id { get; } = Guid.NewGuid();
         public List<City> Cities { get; private set; } = new();
         private static readonly Random _random = new();
-        ILogger logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger("Test");
 
+        private readonly ILogger<World> _logger;
 
-        public World()
-        { 
-
+        public World(ILogger<World> logger)
+        {
+            _logger = logger;
         }
+
         public void GenerateCities()
         {
             GenerateCities(5, 10, 3);

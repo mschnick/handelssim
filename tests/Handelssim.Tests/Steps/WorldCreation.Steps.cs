@@ -2,6 +2,8 @@ using Handelssim.Domain;
 using System.Linq;
 using TechTalk.SpecFlow;
 using Xunit;
+using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Logging;
 
 namespace Handelssim.Tests.Steps
 {
@@ -13,7 +15,7 @@ namespace Handelssim.Tests.Steps
         [Given(@"I create a new world")]
         public void GivenICreateANewWorld()
         {
-            _world = new World();
+            _world = new World(TestLogging.CreateLogger<World>());
             _world.GenerateCities();
         }
 

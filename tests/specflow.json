@@ -1,0 +1,10 @@
+{
+    "specFlow": {
+      "language": "en",           // Sprache der Features
+      "bindingCulture": "en",     // Sprache der Step-Definitionen
+      "featureFileAccess": "file",
+      "stepAssemblies": [
+        { "assembly": "Handelssim.Tests" }
+      ]
+    }
+  }

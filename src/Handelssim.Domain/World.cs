@@ -52,7 +52,7 @@ namespace Handelssim.Domain
         public Guid Id { get; } = Guid.NewGuid();
         public List<City> Cities { get; private set; } = new();
         private static readonly Random _random = new();
-
+        public SimulationTime Time { get; } = new();
         private readonly ILogger<World> _logger;
 
         public World(ILogger<World> logger)
